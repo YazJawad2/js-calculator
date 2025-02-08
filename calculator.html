@@ -1,49 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
-    <style>
-        body {
-            background-color: rgb(195, 101, 0);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        #calculat {
-            text-align: center;
-        }
-        .mybuttons {
-            margin: 5px;
-            width: 70px;
-            height: 65px;
-            border-radius: 50%;
-            font-size: x-large;
-            border: none;
-            cursor: pointer;
-        }
-        .mybuttons:hover{
-            background-color: rgb(164, 163, 160);
-        }
-        #myinput {
-            width: 320px;
-            height: 49px;
-            border: none;
-            border-radius: 4px;
-            background-color: rgb(184, 180, 180);
-            color: white;
-            font-size: xx-large;
-            text-align: right;
-            padding-right: 10px;
-        }
-        #historyplace {
-            margin-top: 10px;
-            color: white;
-            font-size: 1.2em;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <section id="calculat">
@@ -76,36 +37,6 @@
         <p id="historyplace"></p>
     </section>
 
-    <script>
-        const input = document.getElementById('myinput');
-        const historyPlace = document.getElementById('historyplace');
-        let history = [];
-
-        let expression = '';
-
-        document.querySelectorAll('.mybuttons').forEach(button => {
-            button.addEventListener('click', () => {
-                const value = button.textContent;
-
-                if (button.id === 'clear') {
-                    expression = '';
-                } else if (button.id === 'equals') {
-                    try {
-                        const result = eval(expression);
-                        history.push(`${expression} = ${result}`);
-                        expression = result;
-                    } catch {
-                        expression = 'Error';
-                    }
-                } else if (button.id === 'history') {
-                    historyPlace.innerHTML = history.join('<br>');
-                    return;
-                } else {
-                    expression += value;
-                }
-                input.value = expression;
-            });
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 </html>
