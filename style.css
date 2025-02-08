@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(195, 101, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#calculat {
+    text-align: center;
+}
+
+.mybuttons {
+    margin: 5px;
+    width: 70px;
+    height: 65px;
+    border-radius: 50%;
+    font-size: x-large;
+    border: none;
+    cursor: pointer;
+}
+
+.mybuttons:hover {
+    background-color: rgb(164, 163, 160);
+}
+
+#myinput {
+    width: 320px;
+    height: 49px;
+    border: none;
+    border-radius: 4px;
+    background-color: rgb(184, 180, 180);
+    color: white;
+    font-size: xx-large;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#historyplace {
+    margin-top: 10px;
+    color: white;
+    font-size: 1.2em;
+}
